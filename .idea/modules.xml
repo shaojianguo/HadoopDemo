@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo.iml" filepath="$PROJECT_DIR$/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mrr/mrr.iml" filepath="$PROJECT_DIR$/mrr/mrr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mrwritable/mrwritable.iml" filepath="$PROJECT_DIR$/mrwritable/mrwritable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rr/rr.iml" filepath="$PROJECT_DIR$/rr/rr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />
+    </modules>
+  </component>
+</project>

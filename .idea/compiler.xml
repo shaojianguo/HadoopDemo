@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mrr" />
+        <module name="mrwritable" />
+        <module name="rr" />
+        <module name="zookeeper" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lianxi" target="1.8" />
+      <module name="mmr" target="1.8" />
+      <module name="mmrr" target="1.8" />
+      <module name="mr" target="1.8" />
+      <module name="mrr" target="1.8" />
+      <module name="mrwritable" target="1.8" />
+      <module name="rr" target="1.8" />
+      <module name="zookeeper" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

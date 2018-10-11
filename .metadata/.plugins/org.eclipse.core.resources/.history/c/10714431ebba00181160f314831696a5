@@ -1,0 +1,65 @@
+package com.atguigu.hdfs;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.junit.Test;
+
+public class HdfsClient {
+	public static void main(String[] args) throws Exception{
+		
+		Configuration conf = new Configuration();
+		
+		
+		
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop101:9000"), conf, "atguigu");
+		
+		fs.mkdirs(new Path("/0705/xueba/daniuban"));
+		
+		fs.close();
+		
+		
+	}
+	
+	
+	//文件上传
+	@Test
+	public void testCopyFromLocalFile() throws Exception{
+	
+		//1 获取文件
+		Configuration conf = new Configuration();
+		conf.set("dfs.replication", "2");
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop101:9000"), conf, "atguigu");
+		
+		//2 上传文件
+		fs.copyFromLocalFile(new Path("e:/aaa.pdf"), new Path("/aaa.pdf"));
+		
+		//3 关闭资源
+		
+		fs.close();
+		
+		System.out.println("over");
+	}
+	
+	@Test
+	public void testCopyToLocalFile() throws IOException, InterruptedException, URISyntaxException {
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop101:9000"), conf, "atguigu");
+		
+		fs.copyToLocalFile(false, new Path("/aaa.pdf"), new Path("e:/ccc.pdf"), true);
+		
+		fs.close();
+	}
+	
+	@Test
+	public void testDelete() throws IOException, InterruptedException, URISyntaxException {
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop101:9000"), conf, "atguigu");
+		fs.delete(new Path("/aaa.pdf"), true);
+		fs.close();
+	}
+}
